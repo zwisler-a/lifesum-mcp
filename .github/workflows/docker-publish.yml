@@ -52,10 +52,6 @@ jobs:
   publish:
     name: Publish image to Docker Hub
     needs: build
-    # Only push on same-repo events with registry access: direct pushes to
-    # main and version tags. Never runs for pull_request, so fork PRs can
-    # never reach the login step or the DOCKERHUB_* secrets.
-    if: github.event_name == 'push' && github.repository == 'zwisler/lifesum-sync'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
