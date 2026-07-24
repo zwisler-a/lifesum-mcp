@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Placeholder values that are not real secrets"
+paths = ['''\.env\.example''']

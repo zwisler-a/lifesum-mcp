@@ -1,0 +1,21 @@
+{
+  "name": "lifesum-sync",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "mcp:http": "node src/httpServer.js",
+    "mcp:stdio": "node src/stdioServer.js",
+    "download": "node src/download.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "zod": "^4.4.3"
+  }
+}

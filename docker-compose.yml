@@ -1,0 +1,14 @@
+services:
+  lifesum-sync:
+    image: zwisler/lifesum-mcp:latest
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MCP_AUTH_TOKEN=${MCP_AUTH_TOKEN:-}
+    volumes:
+      - lifesum-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  lifesum-data:
